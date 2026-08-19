@@ -26,4 +26,10 @@ class LegController:
         angle = 0.0  # Replace with actual calculation
         return [angle]
 
-    
+    def home(self):
+        """
+        Move the leg to its home position.
+        """
+        # Placeholder for actual homing logic
+        print(f"Leg {self.leg_id} is moving to home position.")
+        
