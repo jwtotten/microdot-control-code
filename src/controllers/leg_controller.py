@@ -1,4 +1,4 @@
-from typing import List
+
 
 class LegController:
     _instance_count = 0
@@ -12,11 +12,11 @@ class LegController:
         if cls._instance_count >= 4:
             raise RuntimeError("LegController can only be instantiated 4 times")
 
-        instance = super(LegController, cls).__new__(cls)
+        instance = super().__new__(cls)
         cls._instance_count += 1
         return instance
 
-    def calculate_leg_angle(self, new_pos) -> List[float]:
+    def calculate_leg_angle(self, new_pos) -> list[float]:
         """
         Calculate the angle of the leg based on the new position.
         :param new_pos: The new position of the leg.

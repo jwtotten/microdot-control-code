@@ -1,1 +1,1 @@
-from leg_controller import LegController
+from leg_controller import LegController as LegController

@@ -1,6 +1,7 @@
 
 from controllers import LegController
 
+
 class Microdot:
     def __init__(self):
         # Initialize the microdot with 4 leg controllers
