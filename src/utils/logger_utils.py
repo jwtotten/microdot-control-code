@@ -19,7 +19,8 @@ class MicrodotLogger:
         # tell the handler to use this format
         console.setFormatter(formatter)
         # add the handler to the root logger
-        return logging.getLogger(name).addHandler(console)
+        logging.getLogger().addHandler(console)
+        return logging.getLogger(name)
 
 
 
