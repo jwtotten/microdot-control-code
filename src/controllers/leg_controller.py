@@ -1,9 +1,9 @@
-
+from .motor_controller import MotorController
 
 class LegController:
     _instance_count = 0
 
-    def __init__(self, leg_id):
+    def __init__(self, motor_controller: MotorController, leg_id: int):
         # Initialize the leg controller
         self.leg_id = leg_id
 
