@@ -6,10 +6,10 @@ from utils import MicrodotLogger
 class MotorController:
 
     def __init__(self, i2c, address=0x40):
+        self.logger = MicrodotLogger("MotorController")
         self.i2c = i2c
         self.address = address
         self._instanciate_motor()
-        self.logger = MicrodotLogger("MotorController")
 
     def _instanciate_motor(self):
         self.pca = PCA9685(self.i2c, address=self.address)

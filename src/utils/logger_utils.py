@@ -2,10 +2,9 @@ import logging
 
 class MicrodotLogger:
     def __init__(self, name: str):
-        self._setup_logger()
-        self.logger = logging.getLogger(name)
+        self.logger = self._setup_logger(name)
 
-    def _setup_logger(self):
+    def _setup_logger(self, name: str):
         # set up logging to file - see previous section for more details
         logging.basicConfig(level=logging.DEBUG,
                             format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
@@ -20,7 +19,7 @@ class MicrodotLogger:
         # tell the handler to use this format
         console.setFormatter(formatter)
         # add the handler to the root logger
-        logging.getLogger().addHandler(console)
+        return logging.getLogger(name).addHandler(console)
 
 
 
