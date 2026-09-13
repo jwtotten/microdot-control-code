@@ -1,4 +1,5 @@
 from .motor_controller import MotorController
+from ..utils import MicrodotLogger
 
 class LegController:
     _instance_count = 0
@@ -6,6 +7,7 @@ class LegController:
     def __init__(self, motor_controller: MotorController, leg_id: int):
         # Initialize the leg controller
         self.leg_id = leg_id
+        self.logger = MicrodotLogger(f"LegController_{self.leg_id}")
         self.motor_controller = motor_controller
 
     def __new__(cls, *args, **kwargs):
