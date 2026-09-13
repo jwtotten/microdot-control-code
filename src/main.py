@@ -7,8 +7,8 @@ from controllers import MotorController
 class Microdot:
     def __init__(self):
         # Initialize the motor controller class
-        self.i2c = board.I2C()
-        self.motor_controller = MotorController(self.i2c)
+        self.i2c = busio.I2C(board.SCL, board.SDA)
+        self.motor_controller = MotorController(self.i2c, address=0x41)
 
         # Initialize the microdot with 4 leg controllers
         self.legs = [LegController(motor_controller=self.motor_controller, leg_id=i) for i in range(4)]
