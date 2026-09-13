@@ -1,7 +1,7 @@
 from adafruit_pca9685 import PCA9685
 from adafruit_motor import servo
 import time
-from src.utils import MicrodotLogger
+from utils import MicrodotLogger
 
 class MotorController:
 
