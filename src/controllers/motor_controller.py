@@ -9,7 +9,7 @@ class MotorController:
 
     def _instanciate_motor(self):
         self.pca = PCA9685(self.i2c)
-        self.pac.frequency = 50  #Hz
+        self.pca.frequency = 50  # Hz
         self.servo = servo.Servo(self.pca.channels[7])
 
     def move_servo(self, angle):
