@@ -12,6 +12,6 @@ class MotorController:
         self.pac.frequency = 50  #Hz
         self.servo = servo.Servo(self.pca.channels[7])
 
-    def move_servo(angle):
+    def move_servo(self, angle):
         self.servo.angle = angle
         time.sleep(0.05)
