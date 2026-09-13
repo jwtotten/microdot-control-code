@@ -1,5 +1,5 @@
 from .motor_controller import MotorController
-from ..utils import MicrodotLogger
+from src.utils import MicrodotLogger
 
 class LegController:
     _instance_count = 0
