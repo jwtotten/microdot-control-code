@@ -22,7 +22,17 @@ class MicrodotLogger:
         logging.getLogger().addHandler(console)
         return logging.getLogger(name)
 
+    def info(self, message):
+        self.logger.info(message)
 
+    def debug(self, message):
+        self.logger.debug(message)
+
+    def warning(self, message):
+        self.logger.warning(message)
+
+    def error(self, message):
+        self.logger.error(message)
 
 # logger1.debug('Quick zephyrs blow, vexing daft Jim.')
 # logger1.info('How quickly daft jumping zebras vex.')
