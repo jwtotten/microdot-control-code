@@ -23,6 +23,6 @@ if __name__ == "__main__":
     microdot = Microdot()
     # home all of the legs at startup
     for leg in microdot.legs:
-        leg.home()
+        leg.loop_leg()
 
     

@@ -6,6 +6,7 @@ class LegController:
     def __init__(self, motor_controller: MotorController, leg_id: int):
         # Initialize the leg controller
         self.leg_id = leg_id
+        self.motor_controller = motor_controller
 
     def __new__(cls, *args, **kwargs):
         # limitting the instantiation of LegController to 4 instances.
@@ -32,4 +33,12 @@ class LegController:
         """
         # Placeholder for actual homing logic
         print(f"Leg {self.leg_id} is moving to home position.")
+
+    def loop_leg(self, num_loops:int = 5):
+
+        for _ in num_loops:
+            for i in range(180):
+                self.motor_controller.move_servo(i)
+            for i in range(180):
+                self.motor_controller.move_servo(180-i)
         
