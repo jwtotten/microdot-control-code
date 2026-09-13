@@ -36,7 +36,7 @@ class LegController:
 
     def loop_leg(self, num_loops:int = 5):
 
-        for _ in num_loops:
+        for _ in range(0, num_loops):
             for i in range(180):
                 self.motor_controller.move_servo(i)
             for i in range(180):
